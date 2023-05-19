@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const Hero = () => {
   return (
     <>
-      <div className="w-full xl:w-[1260px] h-full mx-auto flex items-center justify-center px-7 xl:px-0 py-10">
+      <header className="w-full xl:w-[1260px] h-full mx-auto flex items-center justify-center px-7 xl:px-0 py-10">
         <section className="w-full h-[440px] bg-Primary flex flex-col items-start justify-between gap-10 p-10">
           <div className="flex flex-col items-start justify-start gap-10">
             <h1 className="w-full sm:max-w-lg font-clash font-normal text-3xl sm:text-4xl text-white">
@@ -28,7 +28,7 @@ const Hero = () => {
         <section className="w-[620px] h-[440px] hidden md:block">
           <img src={Banner} alt="" className="w-full h-full object-cover" />
         </section>
-      </div>
+      </header>
     </>
   );
 };
