@@ -20,7 +20,7 @@ const Hero = () => {
               retail brand with nice fonts, tasteful colors and a beautiful way
               to display things digitally using modern web technologies.
             </p>
-            <Link to='/products' className="block md:hidden w-full bg-white bg-opacity-20 font-satoshi font-normal text-light-gray px-5 py-2 hover:bg-opacity-25 transition-all duration-200 focus:bg-opacity-25 outline-none cursor-pointer">
+            <Link to='/products' className="flex md:hidden w-full items-center justify-center bg-white bg-opacity-20 font-satoshi font-normal text-light-gray px-5 py-2 hover:bg-opacity-25 transition-all duration-200 focus:bg-opacity-25 outline-none cursor-pointer">
               View Collection
             </Link>
           </div>
