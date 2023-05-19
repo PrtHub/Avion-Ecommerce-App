@@ -1,4 +1,4 @@
-import { About, Ceramics, Hero, Polpular, Signin, Spaciality } from "../container"
+import { About, Ceramics, Features, Hero, Polpular, Signin } from "../container"
 
 
 const Home = () => {
@@ -6,7 +6,7 @@ const Home = () => {
     <>
     <div className="w-full h-full">
       <Hero/>
-      <Spaciality/>
+      <Features/>
       <Ceramics/>
       <Polpular/>
       <Signin/>
