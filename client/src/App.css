@@ -29,4 +29,8 @@
               transform: translateX(0);
     }
   }
+
+  .content-wrapper {
+   @apply w-full xl:w-[1260px] h-full mx-auto px-7 xl:px-0 py-10 gap-10
+  }
   

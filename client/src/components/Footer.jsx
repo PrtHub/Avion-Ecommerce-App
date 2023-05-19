@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
       <footer className="w-full h-full bg-Primary">
-        <div className="w-full xl:w-[1260px] h-full mx-auto flex flex-col items-start justify-center gap-10 px-7 xl:px-0 py-10">
+        <div className="content-wrapper flex flex-col items-start justify-center">
           <section className="w-full h-full text-white flex flex-wrap-reverse md:flex-wrap items-start justify-between lg:justify-center gap-10 lg:gap-28">
             <ul className="flex flex-col items-start justify-start gap-3 font-satoshi font-normal text-sm">
               <h1 className="text-base">Menu</h1>

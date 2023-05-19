@@ -7,10 +7,11 @@ import { FeaturesCard } from "../components";
 const Features = () => {
   return (
     <>
-      <section className="w-full h-full flex flex-col items-center justify-center py-10">
+    <div className="content-wrapper flex flex-col items-center justify-center">
+      <section className="w-full h-full flex flex-col items-center justify-center">
         <h1 className="font-clash font-normal text-2xl text-Primary">What makes our brand different</h1>
       </section>
-      <section className="w-full xl:w-[1260px] h-full mx-auto flex flex-wrap items-center justify-center lg:justify-between gap-16 lg:gap-10 px-7 xl:px-0 p-5">
+      <section className="w-full h-full flex flex-wrap items-center justify-center lg:justify-between gap-16 lg:gap-10">
         <FeaturesCard
           icon={TbTruckDelivery}
           title="Next day as standard"
@@ -34,6 +35,7 @@ const Features = () => {
           para="We use 100% recycled packaging to ensure our footprint is manageable"
         />
       </section>
+      </div>
     </>
   );
 };
