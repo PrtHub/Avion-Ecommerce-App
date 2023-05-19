@@ -10,7 +10,7 @@ const Features = () => {
       <div className="w-full h-full flex flex-col items-center justify-center py-10">
         <h1 className="font-clash font-normal text-2xl text-Primary">What makes our brand different</h1>
       </div>
-      <section className="w-full xl:w-[1260px] h-full mx-auto flex flex-wrap items-center justify-between gap-10 px-7 xl:px-0 p-5">
+      <section className="w-full xl:w-[1260px] h-full mx-auto flex flex-wrap items-center justify-center lg:justify-between gap-16 lg:gap-10 px-7 xl:px-0 p-5">
         <FeaturesCard
           icon={TbTruckDelivery}
           title="Next day as standard"
