@@ -9,6 +9,9 @@ import lamp1 from './lamp1.png'
 import sofa from './sofa.png'
 import About1 from './About1.png'
 import About2 from './About2.png'
+import chairs from './chairs.png'
+import cup from './cup.png'
+import yellowChair from './yellowChair.png'
 
 
 export {
@@ -22,5 +25,8 @@ export {
     lamp1,
     sofa,
     About1,
-    About2
+    About2,
+    chairs,
+    cup,
+    yellowChair
 }
