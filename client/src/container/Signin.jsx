@@ -1,7 +1,7 @@
 const Signin = () => {
   return (
     <>
-      <div className="content-wrapper flex flex-col items-center justify-center py-20">
+      <div className="content-wrapper flex flex-col items-center justify-center py-20" id="signin">
         <section className="flex flex-col items-center justify-center gap-4">
           <h1 className="font-clash text-Primary text-2xl md:text-3xl font-normal">
             Join the club and get the benefits

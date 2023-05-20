@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BsPersonCircle, BsCart3 } from "react-icons/bs";
 import { HiOutlineMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -14,19 +15,24 @@ const Navbar = () => {
               Avion
             </h1>
           </section>
-          <ul className="hidden lg:flex items-center justify-center gap-10 font-satoshi text-base font-normal text-light-gray-100">
-            <li>Plant pots</li>
-            <li>Ceramics</li>
-            <li>Tables</li>
-            <li>Chairs</li>
-            <li>Crackery</li>
-            <li>Tableware</li>
-            <li>Cutlery</li>
+          <ul className="hidden md:flex items-center justify-center gap-10 font-satoshi text-base font-normal text-light-gray-100">
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <a href="#about">
+              <li>About</li>
+            </a>
+            <Link to="/products">
+              <li>Products</li>
+            </Link>
+            <a href="#signin">
+              <li>Singin</li>
+            </a>
           </ul>
           <section className="flex items-center justify-center gap-3 lg:gap-5 text-Primary ">
             <BsCart3 className=" w-5 h-5" />
             <BsPersonCircle className=" w-4 h-4" />
-            <div className="block lg:hidden ">
+            <div className="block md:hidden ">
               {toggleMenu ? (
                 <MdClose
                   className="w-5 h-5 cursor-pointer"
@@ -45,13 +51,18 @@ const Navbar = () => {
                     onClick={() => setToggleMenu(false)}
                   />
                   <ul className=" bg-light-gray flex flex-col items-start justify-center gap-10 py-10 font-satoshi text-base font-normal text-light-gray-100">
-                    <li>Tables</li>
-                    <li>Chairs</li>
-                    <li>Cutlery</li>
-                    <li>Crackery</li>
-                    <li>Ceramics</li>
-                    <li>Tableware</li>
-                    <li>Plant pots</li>
+                    <Link to="/">
+                      <li>Home</li>
+                    </Link>
+                    <a href="#about">
+                      <li>About</li>
+                    </a>
+                    <Link to="/products">
+                      <li>Products</li>
+                    </Link>
+                    <a href="#signin">
+                      <li>Singin</li>
+                    </a>
                   </ul>
                 </div>
               )}

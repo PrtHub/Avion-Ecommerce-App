@@ -3,7 +3,7 @@ import { About1, About2 } from "../assets";
 const About = () => {
   return (
     <>
-      <div className="w-full h-full flex flex-col items-start justify-center gap-20 px-10 xl:px-0 py-10 ">
+      <div className="w-full h-full flex flex-col items-start justify-center gap-20 px-10 xl:px-0 py-10" id="about">
         <section className="w-full flex items-center justify-center">
           <h1 className="w-full text-center md:max-w-2xl font-clash font-normal text-2xl md:text-3xl text-Primary">
             A brand built on the love of craftmanship, quality and outstanding
