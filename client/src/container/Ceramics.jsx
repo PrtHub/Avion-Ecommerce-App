@@ -12,7 +12,7 @@ const Ceramics = () => {
           </h1>
         </section>
 
-        <section className="w-full h-full flex flex-wrap items-center justify-between">
+        <section className="w-full h-full flex flex-wrap items-center justify-center lg:justify-between gap-10">
           {ceremics.map((ceramic) => (
             <ProductCard key={ceramic.id} ceramic={ceramic} />
           ))}
