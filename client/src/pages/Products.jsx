@@ -1,4 +1,6 @@
 import { productbanner } from "../assets";
+import { ProductCard } from "../components";
+import { AllProducts } from "../constants";
 
 const Products = () => {
   return (
@@ -51,6 +53,11 @@ const Products = () => {
               <option value="price">10000+</option>
             </select>
           </section>
+          <section className="w-full h-full flex flex-wrap items-center justify-center lg:justify-start xl:justify-between gap-10 xl:gap-2">
+          {AllProducts.map((ceramic) => (
+            <ProductCard key={ceramic.id} ceramic={ceramic} />
+          ))}
+        </section>
         </section>
       </div>
     </>
