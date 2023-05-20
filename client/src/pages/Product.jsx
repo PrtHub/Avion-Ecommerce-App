@@ -1,8 +1,12 @@
-
+import { AllProducts } from "../constants"
 
 const Product = () => {
   return (
-    <div>Product</div>
+    <>
+    {AllProducts.map((ceremic) => (
+      <div key={ceremic.id}></div>
+    ))}
+    </>
   )
 }
 

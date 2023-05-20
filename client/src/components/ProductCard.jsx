@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ ceramic }) => {
   return (
     <>
-      <div className={`${ceramic.icon1 ? 'w-[603px]': ' w-[305px]'} h-[462px] bg-white flex flex-col items-start justify-start gap-2`}>
+      <div className={`${ceramic.icon1 ? 'w-[603px]': ' w-[300px]'} h-[460px] bg-white flex flex-col items-start justify-start gap-2`}>
         <Link to={`/product/:${ceramic.id}`}>
           {ceramic.icon1 ? (
             <img
