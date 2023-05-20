@@ -7,6 +7,8 @@ import silky from "./silky.png"
 import chair2 from "./chair2.png"
 import lamp1 from './lamp1.png'
 import sofa from './sofa.png'
+import About1 from './About1.png'
+import About2 from './About2.png'
 
 
 export {
@@ -18,5 +20,7 @@ export {
     silky,
     chair2,
     lamp1,
-    sofa
+    sofa,
+    About1,
+    About2
 }
