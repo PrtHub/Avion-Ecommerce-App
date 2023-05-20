@@ -1,4 +1,5 @@
 import HeroBanner from "./herobanner.png"
+import productbanner from "./productbanner.png"
 import Banner from "./Banner.png"
 import chair from "./chair.png"
 import lamp from "./lamp.png"
@@ -16,6 +17,7 @@ import yellowChair from './yellowChair.png'
 
 export {
     HeroBanner,
+    productbanner,
     Banner,
     chair,
     lamp,
