@@ -1,28 +1,45 @@
 import { useParams } from "react-router-dom";
 import { AllProducts } from "../constants";
 import { ProductCard } from "../components";
+import { useState } from "react";
 
 const Product = () => {
   const { id } = useParams();
+  const [quantity, setQuantity] = useState(1);
   const selectedProduct = AllProducts.find(
     (product) => product.id === parseInt(id)
   );
   const similarProducts = AllProducts.filter((product) => {
     if (Array.isArray(product.tag)) {
-      return product.tag.includes(selectedProduct.tag) && product.id !== selectedProduct.id;
+      return (
+        product.tag.includes(selectedProduct.tag) &&
+        product.id !== selectedProduct.id
+      );
     } else {
-      return product.tag === selectedProduct.tag && product.id !== selectedProduct.id;
+      return (
+        product.tag === selectedProduct.tag && product.id !== selectedProduct.id
+      );
     }
   });
-  
-  const filteredProducts = similarProducts.slice(0,4)
+
+  const filteredProducts = similarProducts.slice(0, 4);
+
+  const handleQuantity = (operation) => {
+    setQuantity((prevQuantity) =>
+      operation === "i" ? prevQuantity + 1 : prevQuantity - 1
+    );
+  };
 
   return (
     <>
       <div className="content-wrapper flex flex-col items-center justify-start gap-20">
         <section className="w-full h-full flex flex-col lg:flex-row items-start  lg:items-center justify-start gap-10 lg:gap-20">
           <section className="w-full h-full sm:w-[407px] sm:h-[461px] md:w-[507px] md:h-[561px]">
-            <img src={selectedProduct.icon || selectedProduct.icon1} alt="" className="w-full h-full" />
+            <img
+              src={selectedProduct.icon || selectedProduct.icon1}
+              alt=""
+              className="w-full h-full"
+            />
           </section>
           <section className="flex flex-col justify-start items-start gap-10">
             <div className="flex flex-col items-start justify-start gap-4">
@@ -49,11 +66,19 @@ const Product = () => {
                 Qunatity
               </h3>
               <div className="flex items-center justify-start gap-4 font-satoshi font-normal text-base text-Primary">
-                <span className="border-[1px] border-light-gray-100 px-4 py-2 cursor-pointer">
+                <span
+                  className={`border-[1px] border-light-gray-100 px-4 py-2 cursor-pointer ${
+                    quantity <= 1 ? "opacity-50 pointer-events-none" : ""
+                  }`}
+                  onClick={() => handleQuantity("d")}
+                >
                   -
                 </span>
-                <p>1</p>
-                <span className="border-[1px] border-light-gray-100 px-4 py-2 cursor-pointer">
+                <p>{quantity}</p>
+                <span
+                  className="border-[1px] border-light-gray-100 px-4 py-2 cursor-pointer"
+                  onClick={() => handleQuantity("i")}
+                >
                   +
                 </span>
               </div>
