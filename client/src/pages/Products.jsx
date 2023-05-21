@@ -11,7 +11,7 @@ const Products = () => {
   const handleFilterChange = (event) => {
     const { id, value } = event.target;
     if (id === "category") {
-      setSelectedTags(value.split(","));
+      setSelectedTags(value);
     } else if (id === "designer") {
       setSelectedDesigner(value);
     }
@@ -19,18 +19,8 @@ const Products = () => {
 
   const filteredProducts = AllProducts.filter((product) => {
     const tagMatch =
-      selectedTags.length === 0 ||
-      selectedTags.some((tag) => {
-        if (typeof product.tag === "string") {
-          return product.tag.toLowerCase() === tag.toLowerCase().trim();
-        } else if (Array.isArray(product.tag)) {
-          return product.tag.some(
-            (productTag) =>
-              productTag.toLowerCase() === tag.toLowerCase().trim()
-          );
-        }
-        return false;
-      });
+      selectedTags.length === "" ||
+     product.tag.toLowerCase() === selectedTags.toLowerCase().trim()
     const designerMatch =
       selectedDesigner === "" ||
       product.designer.toLowerCase() === selectedDesigner.toLowerCase().trim();
@@ -63,13 +53,9 @@ const Products = () => {
               onChange={handleFilterChange}
             >
               <option value="">Product type</option>
-              <option value="furniture">Furniture</option>
-              <option value="chair">Chairs</option>
-              {/* <option value="homeware">Homeware</option> */}
+              <option value="furniture">Furniture</option>           
               <option value="light">Lights</option>
-              <option value="vase">Vases</option>
-              <option value="sofa">Sofas</option>
-              <option value="cup">Cups</option>
+              <option value="ceramic">Ceramics</option>
             </select>
             <select
               id="designer"

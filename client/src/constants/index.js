@@ -55,7 +55,7 @@ export const AllProducts = [
         icon: chair,
         name: 'The Dandy chair',
         price: '4000',
-        tag: ['chair', 'furniture'],
+        tag: 'furniture',
         designer: 'Biggie'
     },
     {
@@ -63,7 +63,7 @@ export const AllProducts = [
         icon: vase,
         name: 'Rustic Vase Set',
         price: '2200',
-        tag: 'vase',
+        tag: 'ceramic',
         designer: 'Robert'
     },
     {
@@ -71,7 +71,7 @@ export const AllProducts = [
         icon: silky,
         name: 'The Silky Vase',
         price: '2500',
-        tag: 'vase',
+        tag: 'ceramic',
         designer: 'Biggie'
     },
     {
@@ -79,7 +79,7 @@ export const AllProducts = [
         icon: lamp,
         name: 'The Lucy Lamp',
         price: '3400',
-        tag: ['light', 'accessories'],
+        tag: 'light',
         designer: 'Liam'
     },
     {
@@ -87,7 +87,7 @@ export const AllProducts = [
         icon1: sofa,
         name: 'The Poplar suede sofa',
         price: '10400',
-        tag: ['sofa', 'furniture'],
+        tag: 'furniture',
         designer: 'Thom'
     },
     {
@@ -95,7 +95,7 @@ export const AllProducts = [
         icon: chair2,
         name: 'The Dandy chair',
         price: '5400',
-        tag: ['chair', 'furniture'],
+        tag: 'furniture',
         designer: 'Robert'
     },
     {
@@ -103,7 +103,7 @@ export const AllProducts = [
         icon: lamp1,
         name: 'The Lucy Lamp',
         price: '5400',
-        tag: ['light', 'accessories'],
+        tag: 'light',
         designer: 'Liam'
     },
     {
@@ -111,7 +111,7 @@ export const AllProducts = [
         icon: chairs,
         name: '2 Chairs',
         price: '10000',
-        tag: ['chair', 'furniture'],
+        tag: 'furniture',
         designer: 'Biggie'
     },
     {
@@ -127,7 +127,7 @@ export const AllProducts = [
         icon: yellowChair,
         name: 'Half chair',
         price: '2500',
-        tag:[ 'chair', 'furniture'],
+        tag: 'furniture',
         designer: 'Robert'
     },
     {
@@ -135,7 +135,7 @@ export const AllProducts = [
         icon: blackChair,
         name: 'Black chair',
         price: '3000',
-        tag:[ 'chair', 'furniture'],
+        tag: 'furniture',
         designer: 'Robert'
     },
 ]
