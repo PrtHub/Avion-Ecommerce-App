@@ -30,7 +30,10 @@ const Navbar = () => {
             </a>
           </ul>
           <section className="flex items-center justify-center gap-3 lg:gap-5 text-Primary ">
+            <div className="relative">
             <BsCart3 className=" w-5 h-5" />
+            <span className="w-5 h-5 absolute -top-4 -right-3 bg-Primary text-white rounded-full flex justify-center items-center">0</span>
+            </div>
             <BsPersonCircle className=" w-4 h-4" />
             <div className="block md:hidden ">
               {toggleMenu ? (
