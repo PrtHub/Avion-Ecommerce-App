@@ -45,10 +45,10 @@ const Products = () => {
           </div>
         </section>
         <section className="content-wrapper flex flex-col items-start justify-start">
-        <section className="flex items-center justify-start gap-10">
+        <section className="w-full h-full flex items-center justify-center sm:justify-start gap-5 sm:gap-10 sm:overflow-auto">
             <select
               id="category"
-              className="w-28 bg-white font-satoshi font-normal text-base text-Primary hover:text-light-gray-100 transition-all duration-200 cursor-pointer py-1"
+              className="w-28 bg-white font-satoshi font-normal text-sm sm:text-base text-Primary hover:text-light-gray-100 transition-all duration-200 cursor-pointer py-1"
               value={selectedTags}
               onChange={handleFilterChange}
             >
@@ -59,7 +59,7 @@ const Products = () => {
             </select>
             <select
               id="designer"
-              className="w-28 bg-white font-satoshi font-normal text-base text-Primary hover:text-light-gray-100 transition-all duration-200 cursor-pointer py-1"
+              className="w-20 sm:w-24 bg-white font-satoshi font-normal text-sm sm:text-base text-Primary hover:text-light-gray-100 transition-all duration-200 cursor-pointer py-1"
               value={selectedDesigner}
               onChange={handleFilterChange}
             >
@@ -71,7 +71,7 @@ const Products = () => {
             </select>
             <select
               id="price"
-              className="w-16 bg-white font-satoshi font-normal text-base text-Primary hover:text-light-gray-100 transition-all duration-200 cursor-pointer py-1"
+              className="w-16 bg-white font-satoshi font-normal text-sm sm:text-base text-Primary hover:text-light-gray-100 transition-all duration-200 cursor-pointer py-1"
             >
               <option value="all">Price</option>
               <option value="price">100 - 500</option>
