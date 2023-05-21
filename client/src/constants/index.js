@@ -1,4 +1,4 @@
-import { chair, chair2, chairs, cup, lamp, lamp1, silky, sofa, vase, yellowChair } from "../assets";
+import { blackChair, chair, chair2, chairs, cup, lamp, lamp1, silky, sofa, vase, yellowChair } from "../assets";
 
 export const ceremics = [
     {
@@ -127,6 +127,14 @@ export const AllProducts = [
         icon: yellowChair,
         name: 'Half chair',
         price: '2500',
+        tag:[ 'chair', 'furniture'],
+        designer: 'Robert'
+    },
+    {
+        id: 11,
+        icon: blackChair,
+        name: 'Black chair',
+        price: '3000',
         tag:[ 'chair', 'furniture'],
         designer: 'Robert'
     },

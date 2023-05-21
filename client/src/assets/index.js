@@ -13,6 +13,19 @@ import About2 from './About2.png'
 import chairs from './chairs.png'
 import cup from './cup.png'
 import yellowChair from './yellowChair.png'
+import blackChair from './BlackChair.png'
+import brownLight from './brownLight.jpg'
+import brownSofa from  './brownSofa.jpg'
+import flowerVase from './flowerVase.jpg'
+import grayChair from './grayChair.jpg'
+import pinkSofa from './pinkSofa.jpg'
+import tableSet from './tableSet.jpg'
+import twoVase from './twoVase.jpg'
+import whiteLight from './whiteLight.jpg'
+import whiteMug from './whiteMug.jpg'
+import whiteSofa from './whiteSofa.jpg'
+import whitestool from './whitestool.jpg'
+
 
 
 export {
@@ -30,5 +43,17 @@ export {
     About2,
     chairs,
     cup,
-    yellowChair
+    yellowChair,
+    blackChair,
+    brownLight,
+    brownSofa,
+    flowerVase,
+    grayChair,
+    pinkSofa,
+    tableSet,
+    twoVase,
+    whiteLight,
+    whiteMug,
+    whiteSofa,
+    whitestool
 }

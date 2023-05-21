@@ -5,7 +5,7 @@ const ProductCard = ({ ceramic }) => {
   return (
     <>
       <div className={`${ceramic.icon1 ? 'w-[603px]': ' w-[300px]'} h-[460px] bg-white flex flex-col items-start justify-start gap-2`}>
-        <Link to={`/product/:${ceramic.id}`}>
+        <Link to={`/product/${ceramic.id}`}>
           {ceramic.icon1 ? (
             <img
               src={ceramic.icon1}
