@@ -114,7 +114,7 @@ const Cart = () => {
         )))}
         <section className="w-full h-full flex items-end">
         <button className=" flex items-center gap-1 bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 " onClick={goBack}>
-        <BsArrowLeft/> Product
+        <BsArrowLeft/> Back
         </button>
         <section className="w-full h-full flex flex-col justify-end items-end gap-4">
           <p className="text-lg sm:text-xl text-[#4E4D93] font-clash font-normal">
