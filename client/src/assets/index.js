@@ -15,7 +15,7 @@ import cup from './cup.png'
 import yellowChair from './yellowChair.png'
 import blackChair from './BlackChair.png'
 import brownLight from './brownLight.jpg'
-import brownSofa from  './brownSofa.jpg'
+import BeigeSofa from  './BeigeSofa.jpg'
 import flowerVase from './flowerVase.jpg'
 import grayChair from './grayChair.jpg'
 import pinkSofa from './pinkSofa.jpg'
@@ -26,6 +26,8 @@ import whiteMug from './whiteMug.jpg'
 import whiteSofa from './whiteSofa.jpg'
 import whitestool from './whitestool.jpg'
 import User from './User.png'
+import pendant from './pendant.jpg'
+import table from './table.jpg'
 
 
 
@@ -47,7 +49,7 @@ export {
     yellowChair,
     blackChair,
     brownLight,
-    brownSofa,
+    BeigeSofa,
     flowerVase,
     grayChair,
     pinkSofa,
@@ -57,5 +59,7 @@ export {
     whiteMug,
     whiteSofa,
     whitestool,
-    User
+    User,
+    pendant,
+    table
 }

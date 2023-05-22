@@ -62,7 +62,7 @@ const Product = () => {
             <img
               src={selectedProduct.icon || selectedProduct.icon1}
               alt=""
-              className="w-full h-full"
+              className="w-full h-full object-cover"
             />
           </section>
           <section className="flex flex-col justify-start items-start gap-10">
