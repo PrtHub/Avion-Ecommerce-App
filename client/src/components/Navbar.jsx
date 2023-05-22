@@ -5,7 +5,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { User } from "../assets";
+
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
