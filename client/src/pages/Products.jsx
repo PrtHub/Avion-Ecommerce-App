@@ -31,7 +31,7 @@ const Products = () => {
     filteredProducts.length > 0 ? filteredProducts : AllProducts;
   return (
     <>
-      <div className="w-full h-full bg-white flex flex-col ">
+      <div className="w-full h-full bg-white flex flex-col z-10">
         <section className="w-full h-[210px] relative">
           <img
             src={productbanner}
