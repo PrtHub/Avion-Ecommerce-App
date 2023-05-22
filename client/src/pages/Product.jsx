@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { AllProducts } from "../constants";
 import { ProductCard } from "../components";
 import { useState } from "react";
@@ -8,6 +8,7 @@ import { addToCart } from "../redux/CartReducer";
 const Product = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  const [goToCart, setGoToCart] = useState(false)
   const [quantity, setQuantity] = useState(1);
 
   const selectedProduct = AllProducts.find(
@@ -49,7 +50,8 @@ console.log(image,title)
           image,
           quantity
         })
-       )
+       ),
+       setGoToCart(true)
   }
 
   return (
@@ -106,9 +108,15 @@ console.log(image,title)
               </div>
             </div>
             <div className="flex items-center justify-start">
+              { goToCart ? 
+              <Link to='/cart' className="bg-Primary text-white px-6 py-3">
+                Go to cart
+              </Link> :
               <button className="bg-Primary text-white px-6 py-3" onClick={handleAddToCart}>
                 Add to cart
               </button>
+              
+              }
             </div>
           </section>
         </section>
