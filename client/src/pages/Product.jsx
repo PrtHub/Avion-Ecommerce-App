@@ -8,7 +8,7 @@ import { addToCart } from "../redux/CartReducer";
 const Product = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const [goToCart, setGoToCart] = useState(false)
+  const [goToCart, setGoToCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
   const selectedProduct = AllProducts.find(
@@ -29,7 +29,7 @@ const Product = () => {
 
   const filteredProducts = similarProducts.slice(0, 4);
 
- const handleQuantity = (operation) => {
+  const handleQuantity = (operation) => {
     setQuantity((prevQuantity) =>
       operation === "i" ? prevQuantity + 1 : prevQuantity - 1
     );
@@ -39,20 +39,20 @@ const Product = () => {
   const price = selectedProduct.price || "";
   const image = selectedProduct.icon || selectedProduct.icon1;
 
-console.log(image,title)
+  console.log(image, title);
 
-  const handleAddToCart  = () => {
-       dispatch(
-        addToCart({
-          id: selectedProduct.id,
-          title,
-          price,
-          image,
-          quantity
-        })
-       ),
-       setGoToCart(true)
-  }
+  const handleAddToCart = () => {
+    dispatch(
+      addToCart({
+        id: selectedProduct.id,
+        title,
+        price,
+        image,
+        quantity,
+      })
+    ),
+      setGoToCart(true);
+  };
 
   return (
     <>
@@ -108,15 +108,18 @@ console.log(image,title)
               </div>
             </div>
             <div className="flex items-center justify-start">
-              { goToCart ? 
-              <Link to='/cart' className="bg-Primary text-white px-6 py-3">
-                Go to cart
-              </Link> :
-              <button className="bg-Primary text-white px-6 py-3" onClick={handleAddToCart}>
-                Add to cart
-              </button>
-              
-              }
+              {goToCart ? (
+                <Link to="/cart" className="bg-Primary text-white px-6 py-3">
+                  Go to cart
+                </Link>
+              ) : (
+                <button
+                  className="bg-Primary text-white px-6 py-3"
+                  onClick={handleAddToCart}
+                >
+                  Add to cart
+                </button>
+              )}
             </div>
           </section>
         </section>
