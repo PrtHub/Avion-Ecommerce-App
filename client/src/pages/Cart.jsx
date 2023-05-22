@@ -66,8 +66,26 @@ const Cart = () => {
                   <p className="font-satoshi font-normal text-Primary text-base">
                     {item.price}
                   </p>
-                  <p className="md:hidden w-[180px] text-center font-satoshi font-normal text-Primary text-base">
-                    {item.quantity}
+                  <p className="md:hidden w-[180px] flex items-center gap-2 text-center font-satoshi font-normal text-Primary text-base">
+                  <button className={`border-Primary border-[1px] px-2 flex items-center justify-center ${dispatch && 'opacity-50 pointer-events-none'}`}
+                  onClick={() =>
+                    handleQuantityChange(item.id, item.quantity - 1)
+                  }
+                  disabled={item.quantity <= 1}
+                >
+                  -
+                </button>
+                <p className="text-base font-normal text-Primary font-satoshi">
+                  {item.quantity}
+                </p>
+                <button className="border-Primary border-[1px] px-2 flex items-center justify-center"
+                  onClick={() =>
+                    handleQuantityChange(item.id, item.quantity + 1)
+                  }
+                  disabled={item.quantity <= 1}
+                >
+                  +
+                </button>
                   </p>
                 </div>
               </section>
@@ -76,8 +94,8 @@ const Cart = () => {
               <p className="text-Primary text-sm font-satoshi font-normal">
                 Quantity
               </p>
-              <div className="flex items-center gap-2">
-                <button
+              <div className="flex items-center gap-4">
+                <button className={`border-Primary border-[1px] px-2 flex items-center justify-center ${dispatch && 'opacity-50 pointer-events-none'}`}
                   onClick={() =>
                     handleQuantityChange(item.id, item.quantity - 1)
                   }
@@ -87,7 +105,7 @@ const Cart = () => {
                 <p className="text-base font-normal text-Primary font-satoshi">
                   {item.quantity}
                 </p>
-                <button
+                <button className="border-Primary border-[1px] px-2 flex items-center justify-center"
                   onClick={() =>
                     handleQuantityChange(item.id, item.quantity + 1)
                   }
