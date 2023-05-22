@@ -25,6 +25,7 @@ import whiteLight from './whiteLight.jpg'
 import whiteMug from './whiteMug.jpg'
 import whiteSofa from './whiteSofa.jpg'
 import whitestool from './whitestool.jpg'
+import User from './User.png'
 
 
 
@@ -55,5 +56,6 @@ export {
     whiteLight,
     whiteMug,
     whiteSofa,
-    whitestool
+    whitestool,
+    User
 }

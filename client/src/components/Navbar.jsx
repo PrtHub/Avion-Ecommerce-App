@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { BsPersonCircle, BsCart3 } from "react-icons/bs";
+import {  BsCart3 } from "react-icons/bs";
+import {  HiOutlineUserCircle } from "react-icons/hi";
 import { HiOutlineMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { User } from "../assets";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -34,10 +36,10 @@ const Navbar = () => {
           </ul>
           <section className="flex items-center justify-center gap-3 lg:gap-5 text-Primary ">
             <Link to='/cart' className="relative">
-            <BsCart3 className=" w-5 h-5" />
-            <span className="w-5 h-5 absolute -top-4 -right-3 bg-Primary text-white rounded-full flex justify-center items-center">{products.length}</span>
+            <BsCart3 className=" w-6 h-6" />
+            <span className="w-6 h-6 absolute -top-4 -right-3 bg-Primary text-white rounded-full flex justify-center items-center">{products.length}</span>
             </Link>
-            <BsPersonCircle className=" w-4 h-4" />
+            <HiOutlineUserCircle className=" w-6 h-6" />
             <div className="block md:hidden ">
               {toggleMenu ? (
                 <MdClose
