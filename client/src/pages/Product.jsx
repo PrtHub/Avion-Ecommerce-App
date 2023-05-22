@@ -2,10 +2,14 @@ import { useParams } from "react-router-dom";
 import { AllProducts } from "../constants";
 import { ProductCard } from "../components";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/CartReducer";
 
 const Product = () => {
+  const dispatch = useDispatch();
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
+
   const selectedProduct = AllProducts.find(
     (product) => product.id === parseInt(id)
   );
@@ -24,11 +28,29 @@ const Product = () => {
 
   const filteredProducts = similarProducts.slice(0, 4);
 
-  const handleQuantity = (operation) => {
+ const handleQuantity = (operation) => {
     setQuantity((prevQuantity) =>
       operation === "i" ? prevQuantity + 1 : prevQuantity - 1
     );
   };
+
+  const title = selectedProduct.name || "";
+  const price = selectedProduct.price || "";
+  const image = selectedProduct.icon || selectedProduct.icon1;
+
+console.log(image,title)
+
+  const handleAddToCart  = () => {
+       dispatch(
+        addToCart({
+          id: selectedProduct.id,
+          title,
+          price,
+          image,
+          quantity
+        })
+       )
+  }
 
   return (
     <>
@@ -84,7 +106,7 @@ const Product = () => {
               </div>
             </div>
             <div className="flex items-center justify-start">
-              <button className="bg-Primary text-white px-6 py-3">
+              <button className="bg-Primary text-white px-6 py-3" onClick={handleAddToCart}>
                 Add to cart
               </button>
             </div>
