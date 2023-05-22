@@ -5,13 +5,13 @@ const Cart = () => {
     <>
       <div className="w-full lg:w-[950px] h-full mx-auto flex flex-col items-start justify-start gap-10 py-20 px-10 lg:px-0">
         <section className="flex items-start justify-start">
-          <h1 className="font-clash font-normal text-3xl text-Primary">
+          <h1 className="font-clash font-normal text-2xl sm:text-3xl text-Primary">
             Your shopping cart
           </h1>
         </section>
         <section className="w-full flex items-start justify-between gap-5">
           <section className="w-full flex flex-col items-start justify-center gap-5">
-            <p className="text-Primary text-sm font-satoshi font-normal">
+            <p className="hidden md:block text-Primary text-sm font-satoshi font-normal">
               Product
             </p>
             <section className="flex items-start justify-start gap-4">
@@ -51,7 +51,7 @@ const Cart = () => {
           </section>
         </section>
         <section className="w-full h-full flex flex-col justify-end items-end gap-4">
-          <p className="text-xl text-[#4E4D93]  font-clash font-normal">
+          <p className="text-lg sm:text-xl text-[#4E4D93] font-clash font-normal">
             Subtotal <span className="text-Primary">£210</span>
           </p>
           <p className="text-[#4E4D93] text-sm font-satoshi font-normal">Taxes and shipping are calculated at checkout</p>
