@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsArrowLeft } from "react-icons/bs";
 import { removeItem, updateQuantity } from "../redux/CartReducer";
-import { Link } from "react-router-dom";
+
 
 const Cart = () => {
+
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.products);
 
@@ -22,6 +23,10 @@ const Cart = () => {
     dispatch(updateQuantity({ id: productId, quantity: newQuantity }));
   };
 
+  const goBack = () => {
+    window.history.back();
+  };
+  
   return (
     <>
       <div className="w-full lg:w-[950px] h-full mx-auto flex flex-col items-start justify-start gap-10 py-20 px-5 sm:px-10 lg:px-0">
@@ -108,9 +113,9 @@ const Cart = () => {
           </section>
         )))}
         <section className="w-full h-full flex items-end">
-        <button className="bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 ">
+        <button className=" flex items-center gap-1 bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 " onClick={goBack}>
         <BsArrowLeft/> Product
-          </button>
+        </button>
         <section className="w-full h-full flex flex-col justify-end items-end gap-4">
           <p className="text-lg sm:text-xl text-[#4E4D93] font-clash font-normal">
             Subtotal:{" "}
