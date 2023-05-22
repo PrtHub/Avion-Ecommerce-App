@@ -1,28 +1,29 @@
 import { cup } from "../assets";
+import { AiOutlineDelete } from 'react-icons/ai'
 
 const Cart = () => {
   return (
     <>
-      <div className="w-full lg:w-[950px] h-full mx-auto flex flex-col items-start justify-start gap-10 py-20 px-10 lg:px-0">
+      <div className="w-full lg:w-[950px] h-full mx-auto flex flex-col items-start justify-start gap-10 py-20 px-5 sm:px-10 lg:px-0">
         <section className="flex items-start justify-start">
           <h1 className="font-clash font-normal text-2xl sm:text-3xl text-Primary">
             Your shopping cart
           </h1>
         </section>
-        <section className="w-full flex items-start justify-between gap-5">
+        <section className="w-full flex items-start justify-center sm:justify-between sm:gap-5">
           <section className="w-full flex flex-col items-start justify-center gap-5">
             <p className="hidden md:block text-Primary text-sm font-satoshi font-normal">
               Product
             </p>
             <section className="flex items-start justify-start gap-4">
-              <div className="w-[133px] h-[166px] sm:w-[160px] sm:h-[184px] md:w-[160px] md:h-[154px] lg:w-[119px] lg:h-[134px]">
+              <div className="w-[133px] h-[166px] sm:w-[160px] sm:h-[184px] md:w-[150px] md:h-[164px]">
                 <img src={cup} alt="" className="w-full h-full object-cover" />
               </div>
               <div className=" h-[166px] sm:h-[184px] flex flex-col items-start justify-between md:justify-start gap-2">
                 <h1 className="font-clash font-normal text-lg text-Primary">
                   White Cup
                 </h1>
-                <p className="max-w-[170px] sm:max-w-[180px] font-satoshi font-normal text-Primary text-xs sm:text-sm md:text-xs lg:text-sm">
+                <p className="max-w-[160px] sm:max-w-[180px] font-satoshi font-normal text-Primary text-xs sm:text-sm md:text-xs lg:text-sm">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Earum, error?
                 </p>
@@ -48,6 +49,9 @@ const Cart = () => {
             <p className="text-base font-normal text-Primary font-satoshi">
               1121
             </p>
+          </section>
+          <section className="mt-10 md:mt-20">
+            <AiOutlineDelete className="text-2xl text-Primary cursor-pointer"/>
           </section>
         </section>
         <section className="w-full h-full flex flex-col justify-end items-end gap-4">
