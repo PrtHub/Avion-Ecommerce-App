@@ -2,6 +2,8 @@ import "./App.css";
 import { Footer, Navbar } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { Cart, Home, Product, Products, Success } from "./pages";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -16,6 +18,18 @@ const App = () => {
           <Route path="/success" element={<Success />} />
         </Routes>
         <Footer />
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
     </>
   );

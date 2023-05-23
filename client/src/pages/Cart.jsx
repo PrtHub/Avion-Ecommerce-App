@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsArrowLeft } from "react-icons/bs";
 import { removeItem, resetCart, updateQuantity } from "../redux/CartReducer";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const naviagte = useNavigate()
@@ -28,7 +29,11 @@ const Cart = () => {
 
   const handleClick = () => {
     dispatch(resetCart(products.id))
-    naviagte('/success')
+    if(products.length === 0) {
+      return toast.warning("Please select a product")
+    } else {
+      naviagte('/success')
+    }
   }
 
   return (
