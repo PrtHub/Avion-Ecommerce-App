@@ -152,7 +152,7 @@ const Cart = () => {
         )}
         <section className="w-full h-full flex items-end">
           <button
-            className=" flex items-center gap-1 bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 "
+            className=" flex items-center gap-1 button"
             onClick={goBack}
           >
             <BsArrowLeft /> Back
@@ -165,7 +165,7 @@ const Cart = () => {
             <p className="text-[#4E4D93] text-sm font-satoshi font-normal">
               Taxes and shipping are calculated at checkout
             </p>
-            <button className="bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 " onClick={handleClick}>
+            <button className="button" onClick={handleClick}>
              Purchase now
             </button>
           </section>

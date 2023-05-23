@@ -110,12 +110,12 @@ const Product = () => {
             </div>
             <div className="flex items-center justify-start">
               {goToCart ? (
-                <Link to="/cart" className="bg-Primary text-white px-6 py-3">
+                <Link to="/cart" className="button">
                   Go to cart
                 </Link>
               ) : (
                 <button
-                  className="bg-Primary text-white px-6 py-3"
+                  className="button"
                   onClick={handleAddToCart}
                 >
                   Add to cart

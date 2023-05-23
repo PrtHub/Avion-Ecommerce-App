@@ -20,7 +20,7 @@ const Signin = () => {
             placeholder="your@email.com"
             className="w-full sm:w-64 h-14  placeholder:text-Primary text-Primary placeholder:text-opacity-40 text-opacity-40 px-4 py-2 outline-none border-none"
           />
-          <button className="w-28 h-14 bg-Primary text-white text-base px-3 py-2">
+          <button className="w-28 h-14 button">
             Sign up
           </button>
         </form>

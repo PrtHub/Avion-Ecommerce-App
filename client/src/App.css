@@ -41,3 +41,7 @@
 .para {
   @apply font-satoshi font-normal text-sm md:text-base text-light-gray-100
 }
+
+.button {
+  @apply bg-Primary text-white font-satoshi font-normal text-sm sm:text-base  px-6 py-3 hover:bg-Dark-Primary transition-all duration-200
+}
