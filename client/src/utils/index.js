@@ -1,4 +1,4 @@
-import confetti from 'canvas-confetti'
+import confetti from "canvas-confetti";
 
 export const Canvas = () => {
   var duration = 15 * 1000;
