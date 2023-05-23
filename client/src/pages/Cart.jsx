@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-
+import { useNavigate } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsArrowLeft } from "react-icons/bs";
-import { removeItem, updateQuantity } from "../redux/CartReducer";
+import { removeItem, resetCart, updateQuantity } from "../redux/CartReducer";
 
 const Cart = () => {
+  const naviagte = useNavigate()
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.products);
 
@@ -24,6 +25,11 @@ const Cart = () => {
   const goBack = () => {
     window.history.back();
   };
+
+  const handleClick = () => {
+    dispatch(resetCart(products.id))
+    naviagte('/success')
+  }
 
   return (
     <>
@@ -154,7 +160,7 @@ const Cart = () => {
             <p className="text-[#4E4D93] text-sm font-satoshi font-normal">
               Taxes and shipping are calculated at checkout
             </p>
-            <button className="bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 ">
+            <button className="bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 " onClick={handleClick}>
              Purchase now
             </button>
           </section>
