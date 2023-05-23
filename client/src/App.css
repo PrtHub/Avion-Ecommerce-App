@@ -35,13 +35,13 @@
 }
 
 .header-text {
-  @apply font-clash text-Primary text-2xl md:text-3xl font-normal
+  @apply font-clash text-Primary text-2xl md:text-3xl font-normal;
 }
 
 .para {
-  @apply font-satoshi font-normal text-sm md:text-base text-light-gray-100
+  @apply font-satoshi font-normal text-sm md:text-base text-light-gray-100;
 }
 
 .button {
-  @apply bg-Primary text-white font-satoshi font-normal text-sm sm:text-base  px-6 py-3 hover:bg-Dark-Primary transition-all duration-200
+  @apply bg-Primary text-white font-satoshi font-normal text-sm sm:text-base  px-6 py-3 hover:bg-opacity-95 transition-all duration-200;
 }
