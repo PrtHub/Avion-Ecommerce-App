@@ -1,7 +1,7 @@
 import "./App.css";
 import { Footer, Navbar } from "./components";
 import { Route, Routes } from "react-router-dom";
-import { Cart, Home, Product, Products } from "./pages";
+import { Cart, Home, Product, Products, Success } from "./pages";
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
         <Footer />
       </div>

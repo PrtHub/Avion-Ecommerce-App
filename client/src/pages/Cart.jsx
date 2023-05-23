@@ -155,7 +155,7 @@ const Cart = () => {
               Taxes and shipping are calculated at checkout
             </p>
             <button className="bg-Primary text-white font-satoshi font-normal text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-3 ">
-              Go to checkout
+             Purchase now
             </button>
           </section>
         </section>
