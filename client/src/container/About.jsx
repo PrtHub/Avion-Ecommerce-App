@@ -5,7 +5,7 @@ const About = () => {
     <>
       <div className="w-full h-full flex flex-col items-start justify-center gap-20 px-10 xl:px-0 py-10" id="about">
         <section className="w-full flex items-center justify-center">
-          <h1 className="w-full text-center md:max-w-2xl font-clash font-normal text-2xl md:text-3xl text-Primary">
+          <h1 className="w-full text-center md:max-w-2xl header-text ">
             A brand built on the love of craftmanship, quality and outstanding
             customer service
           </h1>
@@ -18,11 +18,11 @@ const About = () => {
                   From a studio in London to a global brand with over 400
                   outlets
                 </h1>
-                <p className="font-satoshi font-normal text-sm md:text-base text-light-gray-100">
+                <p className="para">
                   When we started Avion, the idea was simple. Make high quality
                   furniture affordable and available for the mass market.
                 </p>
-                <p className="font-satoshi font-normal text-sm md:text-base text-light-gray-100">
+                <p className="para">
                   Handmade, and lovingly crafted furniture and homeware is what
                   we live, breathe and design so our Chelsea boutique become the
                   hotbed for the London interior design community.

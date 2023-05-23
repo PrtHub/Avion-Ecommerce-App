@@ -79,7 +79,7 @@ const Product = () => {
               <h3 className="font-clash font-normal text-xl text-Primary">
                 Product description
               </h3>
-              <p className="font-satoshi font-normal text-base text-Primary">
+              <p className="para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                 doloremque sapiente, tenetur nesciunt mollitia quaerat neque
                 dolores blanditiis, autem, id officiis dolore nihil dolor
