@@ -14,6 +14,7 @@ const Product = () => {
   const selectedProduct = AllProducts.find(
     (product) => product.id === parseInt(id)
   );
+
   const similarProducts = AllProducts.filter((product) => {
     if (Array.isArray(product.tag)) {
       return (

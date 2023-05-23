@@ -1,7 +1,10 @@
 const Signin = () => {
   return (
     <>
-      <div className="content-wrapper flex flex-col items-center justify-center py-20" id="signin">
+      <div
+        className="content-wrapper flex flex-col items-center justify-center py-20"
+        id="signin"
+      >
         <section className="flex flex-col items-center justify-center gap-4">
           <h1 className="font-clash text-Primary text-2xl md:text-3xl font-normal">
             Join the club and get the benefits
@@ -17,7 +20,9 @@ const Signin = () => {
             placeholder="your@email.com"
             className="w-full sm:w-64 h-14  placeholder:text-Primary text-Primary placeholder:text-opacity-40 text-opacity-40 px-4 py-2 outline-none border-none"
           />
-           <button className="w-28 h-14 bg-Primary text-white text-base px-3 py-2">Sign up</button>
+          <button className="w-28 h-14 bg-Primary text-white text-base px-3 py-2">
+            Sign up
+          </button>
         </form>
       </div>
     </>

@@ -1,5 +1,5 @@
 import { Banner } from "../assets";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -10,7 +10,10 @@ const Hero = () => {
             <h1 className="w-full sm:max-w-lg font-clash font-normal text-3xl sm:text-4xl text-white">
               The furniture brand for the future, with timeless designs
             </h1>
-            <Link to='/products' className="hidden md:block bg-white bg-opacity-20 font-satoshi font-normal text-light-gray px-5 py-2 hover:bg-opacity-25 transition-all duration-200 focus:bg-opacity-25 outline-none cursor-pointer">
+            <Link
+              to="/products"
+              className="hidden md:block bg-white bg-opacity-20 font-satoshi font-normal text-light-gray px-5 py-2 hover:bg-opacity-25 transition-all duration-200 focus:bg-opacity-25 outline-none cursor-pointer"
+            >
               View Collection
             </Link>
           </div>
@@ -20,7 +23,10 @@ const Hero = () => {
               retail brand with nice fonts, tasteful colors and a beautiful way
               to display things digitally using modern web technologies.
             </p>
-            <Link to='/products' className="flex md:hidden w-full items-center justify-center bg-white bg-opacity-20 font-satoshi font-normal text-light-gray px-5 py-2 hover:bg-opacity-25 transition-all duration-200 focus:bg-opacity-25 outline-none cursor-pointer">
+            <Link
+              to="/products"
+              className="flex md:hidden w-full items-center justify-center bg-white bg-opacity-20 font-satoshi font-normal text-light-gray px-5 py-2 hover:bg-opacity-25 transition-all duration-200 focus:bg-opacity-25 outline-none cursor-pointer"
+            >
               View Collection
             </Link>
           </div>

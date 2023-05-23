@@ -3,7 +3,6 @@ import { Footer, Navbar } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { Cart, Home, Product, Products } from "./pages";
 
-
 const App = () => {
   return (
     <>

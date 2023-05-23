@@ -1,36 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .slideAnimation {
-	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
- @-webkit-keyframes slide-left {
-    0% {
-      -webkit-transform: translateX(100px);
-              transform: translateX(100px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
   }
-  @keyframes slide-left {
-    0% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 
-  .content-wrapper {
-   @apply w-full xl:w-[1260px] h-full mx-auto px-7 xl:px-0 py-10 gap-10
-  }
-  
+.content-wrapper {
+  @apply w-full xl:w-[1260px] h-full mx-auto px-7 xl:px-0 py-10 gap-10;
+}

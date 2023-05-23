@@ -7,8 +7,8 @@ const Ceramics = () => {
 
   const handleScroll = () => {
     window.scrollTo(0, 0);
-    navigate('/products')
-  }
+    navigate("/products");
+  };
   return (
     <>
       <div className="content-wrapper flex flex-col items-start justify-start">

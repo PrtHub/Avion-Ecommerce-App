@@ -5,11 +5,4 @@ import Polpular from "./Polpular";
 import Signin from "./Signin";
 import About from "./About";
 
-export {
-    Hero,
-    Features,
-    Ceramics,
-    Polpular,
-    Signin,
-    About
-}
+export { Hero, Features, Ceramics, Polpular, Signin, About };
