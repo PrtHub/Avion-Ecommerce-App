@@ -6,7 +6,7 @@ import { removeItem, resetCart, updateQuantity } from "../redux/CartReducer";
 import { toast } from "react-toastify";
 
 const Cart = () => {
-  const naviagte = useNavigate()
+  const naviagte = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.products);
 
@@ -24,17 +24,18 @@ const Cart = () => {
   };
 
   const goBack = () => {
+    window.scrollTo(0, 0);
     window.history.back();
   };
 
   const handleClick = () => {
-    dispatch(resetCart(products.id))
-    if(products.length === 0) {
-      return toast.warning("Please select a product")
+    dispatch(resetCart(products.id));
+    if (products.length === 0) {
+      return toast.warning("Please select a product");
     } else {
-      naviagte('/success')
+      naviagte("/success");
     }
-  }
+  };
 
   return (
     <>
@@ -77,15 +78,16 @@ const Cart = () => {
                     <p className="font-satoshi font-normal text-Primary text-base">
                       {item.price}
                     </p>
-                    <p className="md:hidden w-[180px] flex items-center gap-2 text-center font-satoshi font-normal text-Primary text-base">
+                    <div className="md:hidden w-[180px] flex items-center gap-2 text-center font-satoshi font-normal text-Primary text-base">
                       <button
                         className={`border-Primary border-[1px] px-2 flex items-center justify-center ${
-                          dispatch && "opacity-50 pointer-events-none"
+                          item.quantity <= 1
+                            ? "opacity-50 pointer-events-none"
+                            : ""
                         }`}
                         onClick={() =>
                           handleQuantityChange(item.id, item.quantity - 1)
                         }
-                        disabled={item.quantity <= 1}
                       >
                         -
                       </button>
@@ -97,11 +99,10 @@ const Cart = () => {
                         onClick={() =>
                           handleQuantityChange(item.id, item.quantity + 1)
                         }
-                        disabled={item.quantity <= 1}
                       >
                         +
                       </button>
-                    </p>
+                    </div>
                   </div>
                 </section>
               </section>
@@ -112,7 +113,7 @@ const Cart = () => {
                 <div className="flex items-center gap-4">
                   <button
                     className={`border-Primary border-[1px] px-2 flex items-center justify-center ${
-                      dispatch && "opacity-50 pointer-events-none"
+                      item.quantity<=1 ? "opacity-50 pointer-events-none" : ""
                     }`}
                     onClick={() =>
                       handleQuantityChange(item.id, item.quantity - 1)
@@ -151,10 +152,7 @@ const Cart = () => {
           ))
         )}
         <section className="w-full h-full flex items-end">
-          <button
-            className=" flex items-center gap-1 button"
-            onClick={goBack}
-          >
+          <button className=" flex items-center gap-1 button" onClick={goBack}>
             <BsArrowLeft /> Back
           </button>
           <section className="w-full h-full flex flex-col justify-end items-end gap-4">
@@ -166,7 +164,7 @@ const Cart = () => {
               Taxes and shipping are calculated at checkout
             </p>
             <button className="button" onClick={handleClick}>
-             Purchase now
+              Purchase now
             </button>
           </section>
         </section>
